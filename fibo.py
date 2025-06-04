@@ -8,7 +8,7 @@ def fibo(n):
         a, b = b , a+b
     return fib_series
 
-n= int(input('enter a number'))
+n = int(input('enter a number'))
 
 if n<0:
     print('the number cannot be negative')
