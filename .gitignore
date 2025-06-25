@@ -1,3 +1,12 @@
 # Ignore all Jupyter notebook checkpoints (in any subdirectory)
+#PowerShell Command to Remove All Tracked .ipynb_checkpoints Folders
+#Get-ChildItem -Recurse -Directory -Filter ".ipynb_checkpoints" | ForEach-Object { git rm -r --cached $_.FullName }
+
 **/.ipynb_checkpoints/
 
+
+#Remove all anaconda_projects/db folders from tracking
+#Untrack Already Committed Folders
+#Get-ChildItem -Recurse -Directory -Filter "db" | Where-Object { $_.FullName -like "*anaconda_projects*" } | ForEach-Object { git rm -r --cached $_.FullName }
+
+**/anaconda_projects/db/
